@@ -21,6 +21,6 @@ jobs:
       - name: build the dockerfile
         run: docker build . --file ./Dockerfile --tag ${{ secrets.DOCKER_HUB_USER}}/test-gha-img:latest
       - name: docker push
-        run: docker push {{ secrets.DOCKER_HUB_USER}}/test-gha-img:latest  
+        run: docker push ${{ secrets.DOCKER_HUB_USER}}/test-gha-img:latest  
 
    
